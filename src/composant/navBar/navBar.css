@@ -1,0 +1,50 @@
+nav {
+	position: fixed;
+	top: 20px;
+	padding: 0 32px 0 32px;
+	width: 100%;
+	z-index: 2;
+	box-sizing: border-box;
+}
+
+.flexNavBar{
+	display: flex;
+	background-color: transparent;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.myName{
+	font-size: 20px;
+}
+
+.menuAction{
+	display: flex;
+	align-items: center;
+}
+
+.btnMenu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50px;
+}
+
+.iconMenu{
+	height: 2px;
+	background-color: white;
+	transition: transform 0.3s;
+}
+
+.iconMenu:first-child{
+	transform: rotate(-45deg) translate3d(0, 15px, 0);
+}
+
+.iconMenu:last-child{
+	transform: rotate(45deg) translate3d(0, -15px, 0);
+}
+
+
+.iconMenuSpacer{
+	height: 20px;
+}
