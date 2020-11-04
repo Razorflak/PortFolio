@@ -1,0 +1,46 @@
+.elementFooter__layout{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: end;
+	width: 100%;
+	max-width: 150px;
+}
+
+.elementFooter__isDisplay > .stickPage{
+	min-height: 75px;
+	background-color: white;
+}
+
+.elementFooter__isDisplay > .pageName{
+	visibility: visible;
+}
+
+.stickPage{
+	min-height: 50px;
+	min-width: 10px;
+	background-color: lightgrey;
+	border-radius: 25px;
+	transition:min-height 0.5s ease, min-height 0.5s ease;
+}
+
+.pageName{
+	visibility: hidden;
+	font-size: 15px;
+}
+
+.elementFooter__layout:hover > .stickPage{
+	min-height: 75px;
+	background-color: white;
+}
+
+.elementFooter__layout:hover > .pageName{
+	visibility: visible;
+}
+
+@media (max-width:960px) { 
+	.pageName{
+		font-size: 3.6vw;
+	}
+	
+} 

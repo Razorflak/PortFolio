@@ -1,0 +1,15 @@
+.monParcours__layout{
+	max-height:100vh;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.lstEtape{
+	height: 100%;
+	max-width: 850px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-items: center;
+}

@@ -1,13 +1,14 @@
 import './main-page.css';
-import React, {  Component, useEffect } from 'react';
+import React, {  Component } from 'react';
 import moi from '../assets/moi.png'
 import stars from '../assets/stars.png';
+import ScrollService from '../service/scroll-service';
 
 class MainPage extends Component {
 	render (){
 		return (
 		<div className='mainDiv'>
-			<div id="layout" className="layout">
+			<div id="layout__main" className="layout page__layout">
 				<img id="starsBg" className="starsBg" src={stars} alt="stars"/>
 				<div className={`personnalInfo ${!this.props.isDisplay? "hiddenLeft" : ""}`}>
 					<h1>Tanguy <br/>Julien</h1>
@@ -19,7 +20,7 @@ class MainPage extends Component {
 					<div className={`${!this.props.isDisplay? "hiddenRight" : ""}`} style={{transition: 'translate 2s ease-in-out', zIndex: 10}}>
 						<img id="l1" className={`moi`} src={moi} alt="c'est moi!"/>
 					</div>
-					<div id="l2" className={`l2 ${!this.props.isDisplay? "hiddenRight" : ""}`} style={{fontSize: '30px'}}>
+					<div id="l2" className={`l2 ${!this.props.isDisplay? "hiddenRight" : ""}`}>
 						<span style={{color:'cyan'}}>console</span>
 						<span style={{color:'wheat'}}>.log</span>
 						<span style={{color:'yellow'}}>(</span>
@@ -38,9 +39,10 @@ class MainPage extends Component {
 		
 		)
 	};
-
+	scrollService
 	componentDidMount() {
-		var parallaxBox = document.getElementById ( 'layout' );
+		this.scrollService = new ScrollService(document.getElementById('layout__main'), this.props.isDisplay) 
+		var parallaxBox = document.getElementById ( 'layout__main' );
 		window.onmousemove = ( event ) => {
 			event = event || window.event;
 			var x = event.clientX - parallaxBox.offsetLeft,
@@ -55,6 +57,10 @@ class MainPage extends Component {
 
 		}
 	};
+
+	componentDidUpdate(){
+		this.scrollService.setIsDisplay(this.props.isDisplay)
+	}
 
 	
 	mouseParallax ( id, left, top, mouseX, mouseY, speed, component ) {

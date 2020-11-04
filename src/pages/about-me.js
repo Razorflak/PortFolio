@@ -1,15 +1,14 @@
-import LevelCompetence from '../composant/level-competence/level-competence';
-import './painOparc-page.css';
+import LevelCompetence from "../composant/level-competence/level-competence";
 import jsIcon from '../assets/js-icon.png'
-import { Component } from 'react';
+import './about-me.css'
+import ScrollService from "../service/scroll-service";
+const { Component } = require("react");
 
-class PainOParcPage extends Component {
 
+class AboutMe extends Component {
 	render() {
 		return (
-			<div className="layoutPainOParc">
-				<h1>PAGE 2</h1>
-				<br></br>
+			<div id='aboutMe__layout' className="aboutMe__layout page__layout">
 				<div className="competences">
 					<LevelCompetence key="javaScript" niveau='90' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='1'/>
 					<LevelCompetence key="1" niveau='70' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='2'/>
@@ -18,11 +17,18 @@ class PainOParcPage extends Component {
 					<LevelCompetence key="4" niveau='80' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='5'/>
 					<LevelCompetence key="5" niveau='40' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='6'/>
 				</div>
-				
 			</div>
+			
 		);
 	}
-	
+	scrollService
+	componentDidMount(){
+		this.scrollService = new ScrollService(document.getElementById('aboutMe__layout'), this.props.isDisplay) 
+	}
+
+	componentDidUpdate(){
+		this.scrollService.setIsDisplay(this.props.isDisplay)
+	}
 }
 
-export default PainOParcPage;
+export default AboutMe;

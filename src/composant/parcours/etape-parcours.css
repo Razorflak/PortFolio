@@ -1,0 +1,73 @@
+.EtapeParcours__layout{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.EtapeParcours__layout__reverse{
+	display: flex;
+	flex-direction: row-reverse;
+	
+}
+
+.EtapeParcours__layout .timeline_panel{
+	display: flex;
+	flex-direction: column;
+	min-width: 40%;
+	max-width: 40%;
+}
+
+.EtapeParcours__layout .timeline_heading{
+	display: flex;
+	flex-direction: column;
+}
+
+.EtapeParcours__layout .timeline_image{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100%;
+	width: 100%;
+	margin: 0 20px 0 20px;
+	box-sizing: border-box;
+}
+
+.EtapeParcours__layout .timeline_image img{
+	width: 110%;
+}
+
+.EtapeParcours__layout .rounded_circle{
+	border-radius: 100%;
+	border: 10px solid #e9ecef;
+	box-sizing: border-box;
+}
+
+.EtapeParcours__layout .timeline_panel_spacer{
+	min-width: 40%;
+	max-width: 40%;
+}
+
+.timeline{
+	position: relative;
+	min-width: 2px;
+	background-color: red;
+	height: 100%;
+}
+
+h4 {
+	font-size: x-large;
+	margin: 0px;
+}
+.subheading{
+	font-size: xx-large;
+}
+
+.EtapeParcours__layout__reverse > *{
+	text-align: left !important;
+}
+
+.EtapeParcours__layout > *{
+	text-align: right;
+}
