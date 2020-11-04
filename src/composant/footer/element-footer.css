@@ -18,7 +18,7 @@
 
 .stickPage{
 	min-height: 50px;
-	min-width: 10px;
+	min-width: 5px;
 	background-color: lightgrey;
 	border-radius: 25px;
 	transition:min-height 0.5s ease, min-height 0.5s ease;

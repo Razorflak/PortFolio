@@ -7,8 +7,8 @@ import ScrollService from '../service/scroll-service';
 class MainPage extends Component {
 	render (){
 		return (
-		<div className='mainDiv'>
-			<div id="layout__main" className="layout page__layout">
+		<div id="layout__main" className='mainDiv'>
+			<div  className="layout page__layout">
 				<img id="starsBg" className="starsBg" src={stars} alt="stars"/>
 				<div className={`personnalInfo ${!this.props.isDisplay? "hiddenLeft" : ""}`}>
 					<h1>Tanguy <br/>Julien</h1>

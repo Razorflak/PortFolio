@@ -27,9 +27,20 @@ class ScrollService{
 		this.scrollMaxTop = scrollPercentage <= 0;
 	}
 
-	get containerHasScrollBar(){
+	/*get containerHasScrollBar(){
 		return this.container.scrollHeight >  this.container.clientHeight
-	}
+	}*/
+
+	get containerHasScrollBar() { 
+		var res = !! this.container['scrollTop']; 
+		  
+		if (!res) { 
+			this.container['scrollTop'] = 1; 
+		    res = !!this.container['scrollTop']; 
+		    this.container['scrollTop'] = 0; 
+		} 
+		return res; 
+	 }
 
 	setIsDisplay(value){
 		this.isDisplay = value
@@ -79,7 +90,6 @@ class ScrollService{
 	}
 
 	onGoDown(){
-		
 		if(!this.isDisplay){
 			return;
 		}
