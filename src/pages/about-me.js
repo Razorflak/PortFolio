@@ -10,7 +10,7 @@ class AboutMe extends Component {
 		return (
 			<div id='aboutMe__layout' className="aboutMe__layout page__layout">
 				<div className="competences">
-					<LevelCompetence key="javaScript" niveau='90' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='1'/>
+					<LevelCompetence key="javaScript" niveau='100' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='1'/>
 					<LevelCompetence key="1" niveau='70' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='2'/>
 					<LevelCompetence key="2" niveau='50' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='3'/>
 					<LevelCompetence key="3" niveau='50' libelle='javaScript' pathLogo={jsIcon} isDisplay={this.props.isDisplay} position='4'/>

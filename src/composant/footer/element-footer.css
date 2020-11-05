@@ -8,7 +8,7 @@
 }
 
 .elementFooter__isDisplay > .stickPage{
-	min-height: 75px;
+	min-height: 50px;
 	background-color: white;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .stickPage{
-	min-height: 50px;
+	min-height: 25px;
 	min-width: 5px;
 	background-color: lightgrey;
 	border-radius: 25px;
@@ -27,10 +27,11 @@
 .pageName{
 	visibility: hidden;
 	font-size: 15px;
+	margin-bottom: 10px;
 }
 
 .elementFooter__layout:hover > .stickPage{
-	min-height: 75px;
+	min-height: 50px;
 	background-color: white;
 }
 

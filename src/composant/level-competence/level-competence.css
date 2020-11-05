@@ -36,6 +36,7 @@
 	display: flex;
 	width: 100%;
 	max-height: 50%;
+	margin-left: 10px;
 }
 
 .levelCompetence__layout  .graph{
@@ -51,7 +52,10 @@
 .levelCompetence__layout .level_graph{
 	display: flex;
 	min-height: 20%;
-	background-color: red;
+	margin-left: 10px;
+	background-color: cyan;
+	border-top-right-radius: 20px;
 	transition: width 1.5s ease-in-out;
 	transition-delay: 1s;
+	box-sizing: border-box;
 }

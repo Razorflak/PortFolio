@@ -52,7 +52,7 @@
 .timeline{
 	position: relative;
 	min-width: 2px;
-	background-color: red;
+	background-color: cyan;
 	height: 100%;
 }
 
