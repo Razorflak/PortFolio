@@ -89,6 +89,26 @@ class Projects extends Component{
 								</div>
 							</div>
 							{/* Slide OverlayFureur END */}
+							{/* Slide Projet bidon pour faire un compte rond quand on divise 100 START */}
+							<div className="slide_project" style={{width:`calc(100%/${this.nbrSlide})`}}>
+								<div className="textProject">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit eu quam sed rhoncus. Integer pellentesque vel turpis quis porta. Fusce finibus vitae mi vel auctor. Cras eget risus auctor diam euismod maximus ac ac leo. Praesent finibus libero ac augue placerat, tincidunt eleifend purus dignissim. Cras vel mollis lectus. Cras gravida, ligula id finibus pretium, dui dolor semper justo, in finibus nisi nisl quis sem. Etiam tempus, nibh non imperdiet molestie, augue eros malesuada nibh, sed viverra elit arcu ut nisi. Ut eu sollicitudin nulla. Sed id blandit diam.
+									</p>
+									<p>
+										Praesent et justo ante. In dictum velit rutrum, molestie lorem sit amet, hendrerit libero. Sed id dui ut massa gravida tristique id et nisl. Donec sed massa mattis, ultrices velit nec, auctor mauris. Quisque ac erat lorem. Sed aliquet nunc vel purus tempus aliquam. Donec scelerisque faucibus metus. Donec eu eleifend arcu. In tempor non ante quis hendrerit. Duis egestas laoreet convallis. Nulla sem eros, semper in turpis eget, laoreet tincidunt metus. Aenean ullamcorper sit amet augue et mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac velit volutpat quam dapibus malesuada. In hac habitasse platea dictumst. Integer aliquet in tortor non accumsan.
+									</p>
+									<div className="icons_project">
+										<IconRound icon={CommonService.icons.html} size={50}/>
+										<IconRound icon={CommonService.icons.css} size={50}/>
+										<IconRound icon={CommonService.icons.js} size={50}/>
+										<IconRound icon={CommonService.icons.node} size={50}/>
+										<IconRound icon={CommonService.icons.express} size={50}/>
+									</div>
+									
+								</div>
+							</div>
+							{/* Slide OverlayFureur END */}
 						</div>
 						
 					</div>
@@ -103,7 +123,7 @@ class Projects extends Component{
 		currentSlide: 0,
 		transitionEnCours: false
 	}
-	nbrSlide = 3;
+	nbrSlide = 4;
 	componentDidMount() {
 		this.scrollService = new ScrollService(document.getElementById('layout__projects'), this.props.isDisplay) 
 	}
@@ -131,7 +151,7 @@ class Projects extends Component{
 	onClickRight = e => {
 		const currentSlide = this.state.currentSlide
 		console.log()
-		if(this.state.currentSlide < this.nbrSlide - 1){
+		if(this.state.currentSlide < this.nbrSlide - 1 - 1){
 			this.setState(
 				(prevState, props) => (
 					{
