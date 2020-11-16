@@ -5,14 +5,23 @@
 	height: 100%;
 	align-items: center;
 	overflow: hidden;
+	position: relative;
 }
 
 .slide_project > img{
-	height: 110%;
+	height: 120%;
 	width: auto;
-	transform: matrix3d(0.87,0,0.50,00.0004,0.00,1,0.00,0,-0.5,0,0.87,0,0,0,0,1);
 	transform-origin: left;
-	perspective: 800px;
+	transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+	transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) , height 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.slide_project_isDisplay > img{
+	transform: matrix3d(1.200,0,0.50,00.0009,0.00,1,0.00,0,-0.5,0,0.87,0,0,0,0,1);
+	transform-origin: left;
+	height: 120%;
+	transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, height 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+	/*transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, height 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;*/
 }
 
 .textProject{
@@ -20,6 +29,7 @@
 	flex-direction: column;
 	width: 100%;
 	align-items: center;
+	transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
 .textProject p {
@@ -42,3 +52,16 @@
 	align-items: center;
 	justify-content: center;
 }
+.links_project{
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.links_project img{
+	width: 50px;
+	height: 50px;
+	margin: 0 20px 0 20px;
+}
+
