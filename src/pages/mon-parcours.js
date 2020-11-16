@@ -16,7 +16,7 @@ class MonParcours extends Component {
 					<EtapeParcours index="2" imgPath={operisLogo} date="2013-2020" titre="Operis" texte=" duofhq osmfmoqsdfnmq sdfndomsfjqs ifbmqsdlmfj qsdmiofj qsdjfiomqsd fiomqsdh fioqsdj gqsiodmgh iqsdfh ioqsdjf hqsiofj jqspdifh iosmqfj siqdofhi qsd fjhioqsdfj qsdiof qsipdf hqsiodf jqsiomdf qsdif hiosq"/>
 					<EtapeParcours index="3" imgPath={operisLogo} date="2013-2020" titre="Operis" texte=" duofhq osmfmoqsdfnmq sdfndomsfjqs ifbmqsdlmfj qsdmiofj qsdjfiomqsd fiomqsdh fioqsdj gqsiodmgh iqsdfh ioqsdjf hqsiofj jqspdifh iosmqfj siqdofhi qsd fjhioqsdfj qsdiof qsipdf hqsiodf jqsiomdf qsdif hiosq"/>
 					<EtapeParcours index="4" imgPath={operisLogo} date="2013-2020" titre="Operis" texte=" duofhq osmfmoqsdfnmq sdfndomsfjqs ifbmqsdlmfj qsdmiofj qsdjfiomqsd fiomqsdh fioqsdj gqsiodmgh iqsdfh ioqsdjf hqsiofj jqspdifh iosmqfj siqdofhi qsd fjhioqsdfj qsdiof qsipdf hqsiodf jqsiomdf qsdif hiosq"/>
-					<EtapeParcours index="5" imgPath={operisLogo} date="2013-2020" titre="Operis" texte=" duofhq osmfmoqsdfnmq sdfndomsfjqs ifbmqsdlmfj qsdmiofj qsdjfiomqsd fiomqsdh fioqsdj gqsiodmgh iqsdfh ioqsdjf hqsiofj jqspdifh iosmqfj siqdofhi qsd fjhioqsdfj qsdiof qsipdf hqsiodf jqsiomdf qsdif hiosq"/>
+					<EtapeParcours index="5" isLast={true} imgPath={operisLogo} date="2013-2020" titre="Operis" texte=" duofhq osmfmoqsdfnmq sdfndomsfjqs ifbmqsdlmfj qsdmiofj qsdjfiomqsd fiomqsdh fioqsdj gqsiodmgh iqsdfh ioqsdjf hqsiofj jqspdifh iosmqfj siqdofhi qsd fjhioqsdfj qsdiof qsipdf hqsiodf jqsiomdf qsdif hiosq"/>
 				</div>
 			</div>
 		);

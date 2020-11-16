@@ -3,6 +3,7 @@ import React, {  Component } from 'react';
 import moi from '../assets/moi.png'
 import stars from '../assets/stars.png';
 import ScrollService from '../service/scroll-service';
+import CommonService from '../service/common-service';
 
 class MainPage extends Component {
 	render (){
@@ -43,18 +44,24 @@ class MainPage extends Component {
 	componentDidMount() {
 		this.scrollService = new ScrollService(document.getElementById('layout__main'), this.props.isDisplay) 
 		var parallaxBox = document.getElementById ( 'layout__main' );
-		window.onmousemove = ( event ) => {
-			event = event || window.event;
-			var x = event.clientX - parallaxBox.offsetLeft,
-			y = event.clientY - parallaxBox.offsetTop;
-			var c1left = document.getElementById ( 'l1' ).offsetLeft,
-			c1top = document.getElementById ( 'l1' ).offsetTop
-			this.mouseParallax ( 'starsBg', c1left, c1top, x, y,  100, this );
-			this.mouseParallax ( 'l1', c1left, c1top, x, y,  -50, this );
-			this.mouseParallax ( 'l2', c1left, c1top, x, y,  -10, this );
-			this.mouseParallax ( 'l3', c1left, c1top, x, y,  -20, this );
-			this.mouseParallax ( 'l4', c1left, c1top, x, y,  -30, this );
-
+		const c1left = document.getElementById ( 'l1' ).offsetLeft,
+		c1top = document.getElementById ( 'l1' ).offsetTop
+		if(!CommonService.isMobilDevice()){
+			window.onmousemove = ( event ) => {
+				event = event || window.event;
+				const x = event.clientX - parallaxBox.offsetLeft
+				const y = event.clientY - parallaxBox.offsetTop;
+				
+				this.mouseParallax ( 'starsBg', c1left, c1top, x, y,  100, this );
+				this.mouseParallax ( 'l1', c1left, c1top, x, y,  -50, this );
+				this.mouseParallax ( 'l2', c1left, c1top, x, y,  -10, this );
+				this.mouseParallax ( 'l3', c1left, c1top, x, y,  -20, this );
+				this.mouseParallax ( 'l4', c1left, c1top, x, y,  -30, this );
+	
+			}
+		}else {
+			//Si on est sur mobil on fait un random pour avoir un mouvement constant
+		
 		}
 	};
 

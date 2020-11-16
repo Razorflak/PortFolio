@@ -17,6 +17,7 @@
 	height: 100%;
 	border-radius: 50%;
 	transition: border-radius 0.5s;
+	background-color: white;
 }
 
 .levelCompetence__layout  .logo img:hover {
@@ -55,6 +56,7 @@
 	margin-left: 10px;
 	background-color: cyan;
 	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 	transition: width 1.5s ease-in-out;
 	transition-delay: 1s;
 	box-sizing: border-box;

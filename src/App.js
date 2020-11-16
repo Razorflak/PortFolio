@@ -5,6 +5,7 @@ import { Component } from 'react';
 import AboutMe from './pages/about-me';
 import MonParcours from './pages/mon-parcours';
 import Footer from './composant/footer/footer';
+import Projects from './pages//projects/projects';
 
 
 class App extends Component {
@@ -14,8 +15,9 @@ class App extends Component {
 				<Navbar/>
 				<div id="mainContainer" className={`mainContainer`} style={{transform: `translate(0px,${this.state.page*-100}vh)`}}>
 					<MainPage id="toto" isDisplay={this.state.page === 0}/>
-					<AboutMe isDisplay={this.state.page === 1}/>
-					<MonParcours isDisplay={this.state.page === 2}/>
+					<Projects isDisplay={this.state.page === 1}/>
+					<AboutMe isDisplay={this.state.page === 2}/>
+					<MonParcours isDisplay={this.state.page === 3}/>
 				</div>
 				<Footer lstPage={this.lstPage} onClick={this.onClickFooterMenu}/>
 			</div>
@@ -32,11 +34,16 @@ class App extends Component {
 		},
 		{
 			pageNumber: 1,
+			pageName: 'Projets',
+			isDisplay: true
+		},
+		{
+			pageNumber: 2,
 			pageName: 'A propos de moi',
 			isDisplay: false
 		},
 		{
-			pageNumber: 2,
+			pageNumber: 3,
 			pageName: 'Mon parcours',
 			isDisplay: false
 		}
@@ -46,7 +53,9 @@ class App extends Component {
 		page: -1,
 		transitionEnCours: false
 	}
-	nbrPage = 3;
+	nbrPage = this.lstPage.length;
+
+	
 
 	onClickFooterMenu = page => {
 		this.setState(
