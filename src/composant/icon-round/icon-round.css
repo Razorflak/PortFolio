@@ -5,6 +5,11 @@
 	background-color: white;
 }
 
+.layout__iconRound img{
+	height: 50px;
+	width: 50px;
+}
+
 .layout__iconRound img:hover {
 	height: 100%;
 	border-radius: 0%;

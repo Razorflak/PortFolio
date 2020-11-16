@@ -1,0 +1,44 @@
+.slide_project{
+	display: flex;
+	flex-direction: row;
+	min-height: 100%;
+	height: 100%;
+	align-items: center;
+	overflow: hidden;
+}
+
+.slide_project > img{
+	height: 110%;
+	width: auto;
+	transform: matrix3d(0.87,0,0.50,00.0004,0.00,1,0.00,0,-0.5,0,0.87,0,0,0,0,1);
+	transform-origin: left;
+	perspective: 800px;
+}
+
+.textProject{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+}
+
+.textProject p {
+	max-width: 500px;
+	font-family: "comfortaa";
+}
+
+.icons_project{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 50%;
+	max-width: 500px;
+}
+
+.icons_project > * {
+	display: flex;
+	margin: 0 20px 20px 0 ;
+	align-items: center;
+	justify-content: center;
+}
