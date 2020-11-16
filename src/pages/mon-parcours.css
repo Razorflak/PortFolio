@@ -1,5 +1,4 @@
 .monParcours__layout{
-	max-height:100vh;
 	overflow: auto;
 	display: flex;
 	justify-content: center;

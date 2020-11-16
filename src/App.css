@@ -12,13 +12,18 @@ body {
 
 .mainContainer {
 	width: 100vw;
-	height: 90vh;
-	min-height: calc(100vh - 60px);
 	transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+	display: flex;
+	flex-direction: column;
 }
 
 /*Style à appliquer sur toutes les pages pour gérer l'espace de la nav bar et footer*/
 .page__layout{
+	width: 100%;
+	min-height: 100vh;
+	max-height: 100vh;
+	height: 100vh;
+	
 	border-top-width: 65px;
 	border-bottom-width: 150px;
 	border-style: solid;
@@ -27,6 +32,9 @@ body {
 
 	/*Pour la scrollBar de mozilla*/
 	scrollbar-color: white rgba(0,0,0,0);
+	
+
+	
 
 }
 
