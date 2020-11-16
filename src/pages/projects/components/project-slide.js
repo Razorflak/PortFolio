@@ -6,8 +6,10 @@ const { default: IconRound } = require("../../../composant/icon-round/icon-round
 
 function ProjectSlide({borderImg, text, lstIcon, nbrSlide, isDisplay, demoLink, gitHubLink}){
 	return (
-		<div className={`slide_project ${isDisplay?'slide_project_isDisplay':''}`} style={{width:`calc(100%/${nbrSlide})`}}>
-			<img src={borderImg} alt=""/>
+		<div className="slide_project" style={{width:`calc(100%/${nbrSlide})`}}>
+			<div className={`img_project ${isDisplay?'slide_project_isDisplay':''}`}>
+				<img src={borderImg} alt=""/>
+			</div>
 			<div className="textProject">
 				<p>{text}</p>
 				
@@ -16,16 +18,16 @@ function ProjectSlide({borderImg, text, lstIcon, nbrSlide, isDisplay, demoLink, 
 						<IconRound icon={icon}/>
 					))}
 				</div>
-				
+				<div className="links_project">
+					<a href={gitHubLink} target="_blank" rel="noreferrer">
+						<img src={gitIcon} alt="Git"/>
+					</a>
+					<a href={demoLink} target="_blank" rel="noreferrer">
+						<img src={demoIcon} alt="Demo"/>
+					</a>
+				</div>
 			</div>
-			<div className="links_project">
-				<a href={gitHubLink} target="_blank" rel="noreferrer">
-					<img src={gitIcon} alt="Git"/>
-				</a>
-				<a href={demoLink} target="_blank" rel="noreferrer">
-					<img src={demoIcon} alt="Demo"/>
-				</a>
-			</div>
+			
 		</div>
 	)
 }

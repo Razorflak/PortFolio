@@ -18,7 +18,9 @@ class Projects extends Component{
 		return (
 			<div id="layout__projects" className="layout__projects page__layout">
 				<div className="container___projects">
-					<img className='arrow_Project' onClick={this.onClickLeft} src={arrowLeft} alt="left"/>
+					<div className="arrow_div" onClick={this.onClickLeft}>
+						<img className='arrow_Project'  src={arrowLeft} alt="left"/>
+					</div>
 					<div className="projects__fixed_slide">
 						<div className="slider" style={{
 							minWidth: `calc(100%*${this.nbrSlide})`,
@@ -29,7 +31,9 @@ class Projects extends Component{
 						</div>
 						
 					</div>
-					<img className='arrow_Project' onClick={this.onClickRight} src={arrowRight} alt="right"/>
+					<div className="arrow_div" onClick={this.onClickRight}>
+						<img className='arrow_Project'  src={arrowRight} alt="right"/>
+					</div>
 				</div>
 			</div>
 		)

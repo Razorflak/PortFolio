@@ -35,8 +35,15 @@
 	transition: transform 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
+.arrow_div{
+	display: flex;
+	height: 100%;
+	width: 70px;
+	align-items: center;
+}
+
 .arrow_Project{
-	height: 20%;
+	height: 10%;
 }
 
 @font-face {
