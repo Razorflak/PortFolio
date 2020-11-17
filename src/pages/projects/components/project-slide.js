@@ -11,11 +11,10 @@ function ProjectSlide({borderImg, text, lstIcon, nbrSlide, isDisplay, demoLink, 
 				<img src={borderImg} alt=""/>
 			</div>
 			<div className="textProject">
-				<p>{text}</p>
-				
+				{text}
 				<div className="icons_project">
 					{lstIcon.map((icon) => (
-						<IconRound icon={icon}/>
+						<IconRound key={icon} icon={icon}/>
 					))}
 				</div>
 				<div className="links_project">
