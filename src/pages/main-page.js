@@ -52,11 +52,11 @@ class MainPage extends Component {
 				const x = event.clientX - parallaxBox.offsetLeft
 				const y = event.clientY - parallaxBox.offsetTop;
 				
-				this.mouseParallax ( 'starsBg', c1left, c1top, x, y,  100, this );
-				this.mouseParallax ( 'l1', c1left, c1top, x, y,  -50, this );
-				this.mouseParallax ( 'l2', c1left, c1top, x, y,  -10, this );
-				this.mouseParallax ( 'l3', c1left, c1top, x, y,  -20, this );
-				this.mouseParallax ( 'l4', c1left, c1top, x, y,  -30, this );
+				this.mouseParallax ( 'starsBg', x, y,  100 );
+				this.mouseParallax ( 'l1', x, y,  -50 );
+				this.mouseParallax ( 'l2', x, y,  -10 );
+				this.mouseParallax ( 'l3', x, y,  -20 );
+				this.mouseParallax ( 'l4', x, y,  -30 );
 	
 			}
 		}else {
@@ -70,7 +70,7 @@ class MainPage extends Component {
 	}
 
 	
-	mouseParallax ( id, left, top, mouseX, mouseY, speed, component ) {
+	mouseParallax ( id, mouseX, mouseY, speed ) {
 		
 		var obj = document.getElementById ( id );
 		var distx = mouseX - obj.offsetWidth;
