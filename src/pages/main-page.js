@@ -71,12 +71,12 @@ class MainPage extends Component {
 
 	
 	mouseParallax ( id, left, top, mouseX, mouseY, speed, component ) {
-
+		
 		var obj = document.getElementById ( id );
 		var distx = mouseX - obj.offsetWidth;
 		var disty = mouseY - obj.offsetHeight;
-		var translate = distx / speed + 'px ' + disty / speed + 'px'
-		obj.style.translate = translate;
+		var translate = distx / speed + 'px, ' + disty / speed + 'px'
+		obj.style.transform  = `translate(${translate})`;
 	};
 
 }
